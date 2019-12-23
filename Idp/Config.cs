@@ -35,7 +35,18 @@ namespace Idp
                     AllowedGrantTypes = GrantTypes.ClientCredentials,
                     ClientSecrets = {new Secret("511536EF-F270-4058-80CA-1C89C192F69A".Sha256())},
                     AllowedScopes = {"api1" , IdentityServerConstants.StandardScopes.OpenId}
+                } ,
+                new Client{
+
+                    ClientId = "pwf clinet",
+                    AllowedGrantTypes = GrantTypes.ResourceOwnerPassword,
+                    ClientSecrets =
+                    {
+                        new Secret("wpf secrect".Sha256())
+                    },
+                    AllowedScopes = {"api1"}
                 }
+
             };
     }
 }

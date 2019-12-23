@@ -20,7 +20,7 @@ namespace WpfClient
     public partial class MainWindow : Window
     {
         private string _accessToken;
-        private DiscoveryResponse _disco;
+        private DiscoveryDocumentResponse _disco;
 
         public MainWindow()
         {
