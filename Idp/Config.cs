@@ -15,6 +15,9 @@ namespace Idp
             {
                 new IdentityResources.OpenId(),
                 new IdentityResources.Profile(),
+                new IdentityResources.Address(),
+                new IdentityResources.Phone(),
+                new IdentityResources.Email()
             };
 
 
@@ -38,13 +41,19 @@ namespace Idp
                 } ,
                 new Client{
 
-                    ClientId = "pwf clinet",
+                    ClientId = "wpf client",
                     AllowedGrantTypes = GrantTypes.ResourceOwnerPassword,
                     ClientSecrets =
                     {
                         new Secret("wpf secrect".Sha256())
                     },
-                    AllowedScopes = {"api1"}
+                    AllowedScopes = {"api1" ,
+                        IdentityServerConstants.StandardScopes.OpenId ,
+                        IdentityServerConstants.StandardScopes.Profile,
+                        IdentityServerConstants.StandardScopes.Address,
+                        IdentityServerConstants.StandardScopes.Email ,
+                        IdentityServerConstants.StandardScopes.Phone
+                    }
                 }
 
             };

@@ -47,7 +47,7 @@ namespace WpfClient
                 Address = disco.TokenEndpoint,
                 ClientId = "wpf client",
                 ClientSecret = "wpf secrect",
-                Scope = "api1 openid profile address phone email",
+                Scope = "api1 openid profile address email phone",
 
                 UserName = userName,
                 Password = password
