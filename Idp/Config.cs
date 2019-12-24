@@ -65,6 +65,7 @@ namespace Idp
                     PostLogoutRedirectUris = {"http://localhost:5002/signout-callback-oidc"},
                     AlwaysIncludeUserClaimsInIdToken = true,
                     AllowOfflineAccess = true , 
+                    AccessTokenLifetime = 60,
                     AllowedScopes =
                     {                      
                         "api1",
